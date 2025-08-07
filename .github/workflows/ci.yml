@@ -20,12 +20,11 @@ jobs:
         uses: styfle/cancel-workflow-action@0.10.0
         with:
           access_token: ${{ github.token }}
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: graalvm/setup-graalvm@v1
         with:
-          version: 'latest'
+          version: '22.1.0'
           java-version: '17'
-          components: 'native-image'
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Build
         run: ./mvnw clean package -B -Pnative
