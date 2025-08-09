@@ -1,7 +1,7 @@
 ---
 id: aws-cli
 name: AWS CLI v2
-defaultVersion: 2.7.30
+defaultVersion: 2.25.14
 layout: directory
 paths: .
 executable: aws
