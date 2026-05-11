@@ -67,12 +67,9 @@ public class SingleBinaryProvisioningTest extends ProvisioTestSupport {
   }
 
   @Test
-  public void provisioningBinaryFromTarGzWithRepackagedAwsCli() throws Exception {
-    // -rw-r--r--  0 runner docker     1069 Mar  7  2021 LICENSE
-    // -rw-r--r--  0 runner docker     9249 Mar  7  2021 README.md
-    // -rwxr-xr-x  0 runner docker 12224056 Mar  7  2021 dive
-    //
-    validateInstallationProvisioning("aws-cli", "2.7.33", "awscli-{os}-{arch}-2.7.33.tar.gz");
+  public void provisioningAwsCliFromOfficialZip() throws Exception {
+    assumeThat(OS, is("Linux"));
+    validateInstallationProvisioning("aws-cli", "2.34.45", "awscli-exe-linux-{arch}-2.34.45.zip");
   }
 
   @Test

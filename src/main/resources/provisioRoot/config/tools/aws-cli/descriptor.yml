@@ -3,24 +3,12 @@ id: aws-cli
 name: AWS CLI v2
 defaultVersion: 2.25.14
 layout: directory
-paths: .
-executable: aws
-packaging: TARGZ
+paths: dist
+executable: dist/aws
+packaging: ZIP_STRIP
 osMappings:
-  Darwin: darwin
   Linux: linux
 archMappings:
   x86_64: x86_64
-  # Need to build arm binaries
   arm64: aarch64
-# NOTE: We replaced this nonsense with binaries created specifically for Provisio here:
-# https://github.com/jvanzyl/repackage-awscli
-# 
-# This allows us not to require any post-install.sh script to deal with the variances.
-#
-# These are here for postery and hopefully the AWS CLI project finds a nicer way to package these.
-# 
-# Inconsistent naming so we just have templates for each OS
-# darwinUrlTemplate: https://awscli.amazonaws.com/AWSCLIV2-{version}.pkg
-# linuxUrlTemplate: https://awscli.amazonaws.com/awscli-exe-linux-{arch}-{version}.zip
-urlTemplate: https://github.com/jvanzyl/repackage-awscli/releases/download/{version}/awscli-{os}-{arch}-{version}.tar.gz
+linuxUrlTemplate: https://awscli.amazonaws.com/awscli-exe-linux-{arch}-{version}.zip
