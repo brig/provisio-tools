@@ -4,7 +4,7 @@ import static ca.vanzyl.provisio.tools.Provisio.*;
 
 import io.quarkus.picocli.runtime.PicocliCommandLineFactory;
 import io.quarkus.picocli.runtime.annotations.TopCommand;
-import javax.enterprise.inject.Produces;
+import jakarta.enterprise.inject.Produces;
 import picocli.CommandLine;
 import picocli.CommandLine.IVersionProvider;
 

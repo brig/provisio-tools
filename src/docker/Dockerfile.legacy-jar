@@ -3,7 +3,7 @@
 #
 # Before building the container image run:
 #
-# ./mvnw package -Dquarkus.package.type=legacy-jar
+# ./mvnw package -Dquarkus.package.jar.type=legacy-jar
 #
 # Then, build the image with:
 #
@@ -21,7 +21,7 @@
 # docker run -i --rm -p 8080:8080 quarkus/kassert-legacy-jar
 #
 ###
-FROM registry.access.redhat.com/ubi8/openjdk-11-runtime:1.10
+FROM registry.access.redhat.com/ubi9/openjdk-17-runtime:1.24
 
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en'
 

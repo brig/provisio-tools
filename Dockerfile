@@ -1,4 +1,4 @@
-FROM quay.io/quarkus/quarkus-micro-image:1.0
+FROM quay.io/quarkus/ubi9-quarkus-micro-image:2.0
 
 ARG VERSION
 ARG USER

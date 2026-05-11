@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17.0.4_8-jre
+FROM eclipse-temurin:17.0.19_10-jre-ubi9-minimal
 
 ARG MAVEN_VERSION
 
